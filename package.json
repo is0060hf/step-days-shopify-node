@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "build": "npx tsc",
+    "prestart": "yarn run build",
+    "start": "node dist/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/is0060hf/step-days-shopify-node.git"
-  },
+  "repository": "git+https://github.com/is0060hf/step-days-shopify-node.git",
   "author": "= <=> (=)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/is0060hf/step-days-shopify-node/issues"
   },
-  "homepage": "https://github.com/is0060hf/step-days-shopify-node#readme"
+  "homepage": "https://github.com/is0060hf/step-days-shopify-node#readme",
+  "dependencies": {
+    "shopify-api-node": "^3.6.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
